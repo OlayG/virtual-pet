@@ -33,20 +33,18 @@ namespace VirtualPet
             newPug.Name = newPug.PugName();
             Console.ResetColor();
 
-
-
-            int selection; // Initiated outside of the loop
+            int selection;
 
             do
             {
 
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine("\n" + newPug.ToString());
                 Console.WriteLine();
                 Console.WriteLine("------------------------------------------------+");
-                Console.WriteLine("1. Feed {0}                                    |", newPug.Name);
-                Console.WriteLine("2. Quench {0}                                  |", newPug.Name);
-                Console.WriteLine("3. Take {0} out for bathroom                   |", newPug.Name);
+                Console.WriteLine("1. Give {0} some food.                         |", newPug.Name);
+                Console.WriteLine("2. Give {0} some water.                        |", newPug.Name);
+                Console.WriteLine("3. Take {0} out to the bathroom                |", newPug.Name);
                 Console.WriteLine("4. Play with {0}                               |", newPug.Name);
                 Console.WriteLine("5. Take {0} to the doctor                      |", newPug.Name);
                 Console.WriteLine("6. Kill {0}                                    |", newPug.Name);

@@ -34,22 +34,70 @@ namespace VirtualPet
             }
         }
 
-        public int Thirsty { get; set; }
-        public bool Bathroom { get; set; }
-        public bool Play { get; set; }
-        public bool Doctor { get; set; }
+        private int _thirsty;
+        public int Thirsty
+        {
+            get
+            {
+                return _thirsty;
+            }
+            set
+            {
+                _thirsty = value;
+            }
+        }
+
+        private bool _bathroom;
+        public bool Bathroom
+        {
+            get
+            {
+                return _bathroom;
+            }
+            set
+            {
+                _bathroom = value;
+            }
+        }
+
+        private bool _play;
+        public bool Play
+        {
+            get
+            {
+                return _play;
+            }
+            set
+            {
+                _play = value;
+            }
+        }
+
+        private bool _doctor;
+        public bool Doctor
+        {
+            get
+            {
+                return _doctor;
+            }
+            set
+            {
+                _doctor = value;
+            }
+        }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine("\n===MY=PUG====");
-            sb.AppendLine(Name);
-            sb.AppendFormat("Hungry: {0}\n", Hungry);
-            sb.AppendFormat("Thirsty: {0}\n", Thirsty);
-            sb.AppendFormat("Bathroom: {0}\n", Bathroom);
-            sb.AppendFormat("Play: {0}\n", Play);
-            sb.AppendFormat("Doctor: {0}\n", Doctor);
+            sb.AppendLine("\n=======MY=PUG=====++");
+            sb.AppendLine(Name + "              ||");
+            sb.AppendFormat("Hungry: {0}         ||\n", Hungry);
+            sb.AppendFormat("Thirsty: {0}        ||\n", Thirsty);
+            sb.AppendFormat("Bathroom: {0}   ||\n", Bathroom);
+            sb.AppendFormat("Play: {0}       ||\n", Play);
+            sb.AppendFormat("Doctor: {0}     ||\n", Doctor);
+            sb.AppendLine("==================++");
 
             return sb.ToString();
         }
@@ -63,6 +111,11 @@ namespace VirtualPet
         {
 
             return Hungry;
+        }
+
+        public void Tick()
+        {
+            //TODO
         }
     }
 }
