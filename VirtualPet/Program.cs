@@ -58,7 +58,8 @@ namespace VirtualPet
 
                 if (selection == 1)
                 {
-                    //EnrollStudent();
+                    newPug.Tick();
+                    newPug.PugHungry();
                 }
                 else if (selection == 2)
                 {
@@ -83,7 +84,7 @@ namespace VirtualPet
 
 
 
-            } while (selection != 6);
+            } while (selection != 6 && newPug.IsAlive());
         }
     }
 }
