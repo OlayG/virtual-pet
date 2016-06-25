@@ -57,13 +57,12 @@ namespace VirtualPet
                 selection = Convert.ToInt32(Console.ReadLine());
 
                 if (selection == 1)
-                {
-                    newPug.Tick();
+                {                    
                     newPug.PugHungry();
                 }
                 else if (selection == 2)
                 {
-                    //UnEnrollStudent();
+                    newPug.PugThirsty();
                 }
                 else if (selection == 3)
                 {
