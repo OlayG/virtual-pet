@@ -38,7 +38,7 @@ namespace VirtualPet
                 }
                 if (_hungry > MinHungerThirst)
                 {
-                    _hungry = MinHungerThirst;
+                    IsAlive();
                 }
 
             }
@@ -46,7 +46,7 @@ namespace VirtualPet
 
         public bool IsAlive()
         {
-            if (Hungry > 0)
+            if (Hungry > 0 && Hungry <= MinHungerThirst + 6)
             {
                 return true;
             }
@@ -123,13 +123,13 @@ namespace VirtualPet
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine("\n=======MY=PUG=====++");
-            sb.AppendLine(Name + "              ||");
-            sb.AppendFormat("Hungry: {0}" + "         ||\n", Hungry);
-            sb.AppendFormat("Thirsty: {0}        ||\n", Thirsty);
-            sb.AppendFormat("Bathroom: {0}   ||\n", Bathroom);
-            sb.AppendFormat("Play: {0}       ||\n", Play);
-            sb.AppendFormat("Doctor: {0}     ||\n", Doctor);
+            sb.AppendLine("======MY=PUG=====++");
+            sb.AppendLine(Name);
+            sb.AppendFormat("Hungry: {0} \n", Hungry);
+            sb.AppendFormat("Thirsty: {0} \n", Thirsty);
+            sb.AppendFormat("Bathroom: {0} \n", Bathroom);
+            sb.AppendFormat("Play: {0} \n", Play);
+            sb.AppendFormat("Doctor: {0} \n", Doctor);
             sb.AppendLine("==================++");
 
             return sb.ToString();
@@ -166,11 +166,13 @@ namespace VirtualPet
                     Hungry += 2;
                     if (Hungry >= MinHungerThirst)
                     {
-                        Console.WriteLine("{0} is now Full!\nCarefull not too overfeed!", Name);
+                        Console.WriteLine("{0} is now Full!\nCarefull not too overfeed!\nPress enter to continue", Name);
+                        Console.ReadKey();
                     }
                     else
                     {
-                        Console.WriteLine("Good job, {0} is getting fuller", Name);
+                        Console.WriteLine("Good job, {0} is getting fuller\nPress enter to continue", Name);
+                        Console.ReadKey();
                     }
 
                     // Method is increase thirst

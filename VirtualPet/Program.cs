@@ -10,15 +10,12 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
-            Console.Write("Welcome to Virtual Pug\nWould you like to adopt a Virtual baby Pug\nPress \"1\" for YES and \"2\" for NO\n");
-            int response = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Welcome to Virtual Pug\nEnjoy your jorney as a Virtual Pug Owner\n");
+            Menu();
 
-            if (response == 1)
-            {
-                Menu();
-            }
-
-            Console.WriteLine("We understand, maybe on your next vist\n Press any key to exit");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nSeems your Virtual Pug has gotten really sick.\nMaybe you're not cut out for this.\nPress any key to exit");
+            Console.ResetColor();
             Console.ReadKey();
         }
 
@@ -37,9 +34,10 @@ namespace VirtualPet
 
             do
             {
-
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine("\n" + newPug.ToString());
+                //Console.WriteLine("\n" + newPug.ToString());
+                Console.WriteLine(newPug.ToString());
                 Console.WriteLine();
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("1. Give {0} some food.                         |", newPug.Name);
