@@ -331,7 +331,7 @@ namespace VirtualPet
 
         public bool PugDoctor()
         {
-            Console.WriteLine("Are you ready to play with {0}?", Name);
+            Console.WriteLine("Are you ready to go to the Doctors");
             Console.WriteLine("1 for YES \t 2 for NO");
             int choice = Convert.ToInt32(Console.ReadLine());
             if (choice == 1)
@@ -344,6 +344,60 @@ namespace VirtualPet
             }
 
             return Doctor;
+        }
+
+        public void DoctorVisit()
+        {
+            while (Doctor)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine(ToString());
+                Console.WriteLine();
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("Welcome to Doctors office");
+                Console.WriteLine("Bring {0} right on in", Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine();
+                Console.ResetColor();
+                //int selection = Convert.ToInt32(Console.ReadLine());
+                //if (selection == 1)
+                //{
+                //    Console.WriteLine("{0} enjoys the wind", Name);
+                //}
+                //else if (selection == 2)
+                //{
+                //    Console.WriteLine("{0} isn't too good at this", Name);
+                //}
+                //else if (selection == 3)
+                //{
+                //    Console.WriteLine("{0} does not like this too much", Name);
+                //}
+                //else if (selection == 4)
+                //{
+                //    Console.WriteLine("{0} only likes catching treats", Name);
+                //}
+                //else
+                //{
+                //    Console.WriteLine("PUGGSSSSSSSSSSSS");
+                //}
+
+                Console.WriteLine("We gonna have a good time!");
+                Console.ReadKey();
+
+                Console.WriteLine("{0} is all good to go\nHead to the receptionist to schedule your next appointment", Name);
+                Console.WriteLine("Press 1 to schedule the appointment");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)
+                {
+                    Doctor = false;
+                    break;
+                }
+                else
+                {
+                    break; ;
+                }
+            }
         }
 
         public void Tick()

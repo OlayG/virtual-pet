@@ -34,7 +34,19 @@ namespace VirtualPet
 
             do
             {
-                newPug.PlayWithPug();
+                if (newPug.Play)
+                {
+                    newPug.PlayWithPug();
+                }
+                else if (newPug.Doctor)
+                {
+                    newPug.DoctorVisit();
+                }
+                else
+                {
+                    
+                }
+
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 //Console.WriteLine("\n" + newPug.ToString());
@@ -73,7 +85,7 @@ namespace VirtualPet
                 }
                 else if (selection == 5)
                 {
-                    //PrintStudentList();
+                    newPug.PugDoctor();
                 }
                 else
                 {
