@@ -241,12 +241,12 @@ namespace VirtualPet
                     if(random.Next(100)+1 <= 70)
                     {
                         Console.WriteLine("{0} is atempting to pee", Name);
-                        // Pee method
+                        PugPeeing();
                     }
                     else
                     {
                         Console.WriteLine("{0} is atempting to poop", Name);
-                        // Poop method
+                        PugPooping();
                     }
                 }
             }
@@ -255,6 +255,16 @@ namespace VirtualPet
                 Console.WriteLine("{0} went crazy due to constipation!", Name);
             }
             return Bathroom;
+        }
+
+        private void PugPooping()
+        {
+           //TODO 
+        }
+
+        private void PugPeeing()
+        {
+            //TODO
         }
 
         public bool PugPlay()
@@ -279,14 +289,17 @@ namespace VirtualPet
             while (Play)
             {
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 //Console.WriteLine("\n" + newPug.ToString());
                 Console.WriteLine(ToString());
-                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("1. Take {0} for a walk.", Name);
+                Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("2. Play frisbee with {0}.", Name);
+                Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("3. Go for a run with {0}.", Name);
+                Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("4. Play catch with {0}.", Name);
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine();

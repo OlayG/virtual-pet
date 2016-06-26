@@ -10,23 +10,30 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
-            Console.Write("Welcome to Virtual Pug\nEnjoy your jorney as a Virtual Pug Owner\n");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("\n\n\n\n\n\n\n\n\n");
+            Console.Write("\t\t\t  Welcome to Virtual Pug\n\t\t Enjoy your jorney as a Virtual Pug Owner\n");
+            Console.WriteLine("\n\t\t\t      Tap to continue");
+            Console.ReadKey();
+            Console.Clear();
             Menu();
+            Console.ResetColor();
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nSeems your Virtual Pug has gotten really sick.\nMaybe you're not cut out for this.\nPress any key to exit");
+            //Seems your Virtual Pug has gotten really sick.\n
+            Console.WriteLine("\nMaybe you're not cut out for this.\nPress any key to exit");
             Console.ResetColor();
             Console.ReadKey();
         }
 
         private static void Menu()
         {
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("-------------------------------------------------------------------------");
-            Console.WriteLine("Thank you for adopting!");
+            //Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            //Console.WriteLine("-------------------------------------------------------------------------");
+            //Console.WriteLine("Thank you for adopting!\n");
             Pet newPug = new Pet();
-            Console.WriteLine("Enter a name for your new pug");
+            Console.WriteLine("What would you like to name your pug?");
             newPug.Name = newPug.PugName();
             Console.ResetColor();
 
@@ -48,17 +55,23 @@ namespace VirtualPet
                 }
 
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 //Console.WriteLine("\n" + newPug.ToString());
                 Console.WriteLine(newPug.ToString());
-                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Green;
+                //Console.WriteLine();
                 Console.WriteLine("------------------------------------------------+");
-                Console.WriteLine("1. Give {0} some food.                         |", newPug.Name);
-                Console.WriteLine("2. Give {0} some water.                        |", newPug.Name);
-                Console.WriteLine("3. Take {0} out to the bathroom                |", newPug.Name);
-                Console.WriteLine("4. Play with {0}                               |", newPug.Name);
-                Console.WriteLine("5. Take {0} to the doctor                      |", newPug.Name);
-                Console.WriteLine("6. Kill {0}                                    |", newPug.Name);
+                Console.WriteLine("1. Give {0} some food.", newPug.Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("2. Give {0} some water.", newPug.Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("3. Take {0} out to the bathroom.", newPug.Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("4. Play with {0}.", newPug.Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("5. Take {0} to the vet.", newPug.Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("6. Release {0}.", newPug.Name);
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine();
                 Console.ResetColor();
