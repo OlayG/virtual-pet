@@ -34,6 +34,7 @@ namespace VirtualPet
 
             do
             {
+                newPug.PlayWithPug();
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 //Console.WriteLine("\n" + newPug.ToString());
@@ -50,7 +51,7 @@ namespace VirtualPet
                 Console.WriteLine();
                 Console.ResetColor();
 
-
+                
 
                 selection = Convert.ToInt32(Console.ReadLine());
 
@@ -68,7 +69,7 @@ namespace VirtualPet
                 }
                 else if (selection == 4)
                 {
-                    //PrintStudentList();
+                    newPug.PugPlay();
                 }
                 else if (selection == 5)
                 {

@@ -202,6 +202,17 @@ namespace VirtualPet
                 if (choice == 1)
                 {
                     Thirsty++;
+                    if (Thirsty >= MinHungerThirst)
+                    {
+                        Console.WriteLine("{0} thirst is now quenched!\nToo much water can make {0} sick!\nPress enter to continue", Name);
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Good job, {0} thirst is getting quenched\nPress enter to continue", Name);
+                        Console.ReadKey();
+                    }
+
                     //method to increase hunger
                 }
             }
@@ -241,18 +252,97 @@ namespace VirtualPet
             }
             else
             {
-                Console.WriteLine("{0} died of starvation!", Name);
+                Console.WriteLine("{0} went crazy due to constipation!", Name);
             }
             return Bathroom;
         }
 
         public bool PugPlay()
         {
+            Console.WriteLine("Are you ready to play with {0}?", Name);
+            Console.WriteLine("1 for YES \t 2 for NO");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1)
+            {
+                Play = true;
+            }
+            else
+            {
+                Play = false;
+            }
+
             return Play;
+        }
+
+        public void PlayWithPug()
+        {
+            while (Play)
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                //Console.WriteLine("\n" + newPug.ToString());
+                Console.WriteLine(ToString());
+                Console.WriteLine();
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine("1. Take {0} for a walk.", Name);
+                Console.WriteLine("2. Play frisbee with {0}.", Name);
+                Console.WriteLine("3. Go for a run with {0}.", Name);
+                Console.WriteLine("4. Play catch with {0}.", Name);
+                Console.WriteLine("------------------------------------------------+");
+                Console.WriteLine();
+                Console.ResetColor();
+                int selection = Convert.ToInt32(Console.ReadLine());
+                if (selection == 1)
+                {
+                    Console.WriteLine("{0} enjoys the wind", Name);
+                }
+                else if (selection == 2)
+                {
+                    Console.WriteLine("{0} isn't too good at this", Name);
+                } else if (selection == 3)
+                {
+                    Console.WriteLine("{0} does not like this too much", Name);
+                }else if(selection == 4)
+                {
+                    Console.WriteLine("{0} only likes catching treats", Name);
+                }else
+                {
+                    Console.WriteLine("PUGGSSSSSSSSSSSS");
+                }
+
+                Console.WriteLine("We gonna have a good time!");
+                Console.ReadKey();
+
+                Console.WriteLine("Do you want to keep playing with {0}?", Name);
+                Console.WriteLine("1 for YES \t 2 for NO");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)
+                {
+                    continue;
+                }
+                else
+                {
+                    Play = false;
+                    break;
+                }
+            }
+            
         }
 
         public bool PugDoctor()
         {
+            Console.WriteLine("Are you ready to play with {0}?", Name);
+            Console.WriteLine("1 for YES \t 2 for NO");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1)
+            {
+                Doctor = true;
+            }
+            else
+            {
+                Doctor = false;
+            }
+
             return Doctor;
         }
 
