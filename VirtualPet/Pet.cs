@@ -264,13 +264,30 @@ namespace VirtualPet
            //TODO 
            if (random.Next(100)+1 <= 20)
             {
-
+                Console.WriteLine("{0} is having a hard time pooping\nMaybe a doctor visit is needed", Name);
+                Doctor = true;
+            }
+            else
+            {
+                Console.WriteLine("{0} is done pooping", Name);
+                if(Hungry > 2)
+                    Hungry--;
             }
         }
 
         private void PugPeeing()
         {
-            //TODO
+            if (random.Next(100) + 1 <= 20)
+            {
+                Console.WriteLine("{0} is having a hard time pooping\nMaybe a doctor visit is needed", Name);
+                Doctor = true;
+            }
+            else
+            {
+                Console.WriteLine("{0} is done pooping", Name);
+                if (Thirsty > 2)
+                    Thirsty--;
+            }
         }
 
         public bool PugPlay()
@@ -296,7 +313,6 @@ namespace VirtualPet
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                //Console.WriteLine("\n" + newPug.ToString());
                 Console.WriteLine(ToString());
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("------------------------------------------------+");
