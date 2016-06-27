@@ -176,6 +176,8 @@ namespace VirtualPet
                     }
 
                     // Method is increase thirst
+                    if (Thirsty > 3)
+                        Thirsty -= 2;
                 }
             }
             else if (!IsAlive() && Hungry < 1)
@@ -260,6 +262,10 @@ namespace VirtualPet
         private void PugPooping()
         {
            //TODO 
+           if (random.Next(100)+1 <= 20)
+            {
+
+            }
         }
 
         private void PugPeeing()
@@ -408,7 +414,7 @@ namespace VirtualPet
                 }
                 else
                 {
-                    break; ;
+                    break;
                 }
             }
         }
