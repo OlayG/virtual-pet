@@ -28,7 +28,6 @@ namespace VirtualPet
 
         private static void Menu()
         {
-            //Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             //Console.WriteLine("-------------------------------------------------------------------------");
             //Console.WriteLine("Thank you for adopting!\n");

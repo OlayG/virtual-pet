@@ -320,9 +320,9 @@ namespace VirtualPet
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine("2. Play frisbee with {0}.", Name);
                 Console.WriteLine("------------------------------------------------+");
-                Console.WriteLine("3. Go for a run with {0}.", Name);
+                Console.WriteLine("3. Play Tug-of-war with {0}.", Name);
                 Console.WriteLine("------------------------------------------------+");
-                Console.WriteLine("4. Play catch with {0}.", Name);
+                Console.WriteLine("4. Play fetch with {0}.", Name);
                 Console.WriteLine("------------------------------------------------+");
                 Console.WriteLine();
                 Console.ResetColor();
@@ -434,9 +434,12 @@ namespace VirtualPet
                 }
             }
         }
-
+              
+     
         public void Tick()
         {
+            //Tick pugParty = new Tick();
+           
             //TODO
             if (IsAlive())
             {
@@ -446,7 +449,7 @@ namespace VirtualPet
                     {
                         Hungry++;
                     }
-                    Console.WriteLine("{0} fed his/her self", Name);
+                    Console.WriteLine("{0} found the food stash!", Name);
                 }
 
                 if (random.Next(100) + 1 <= 5)
@@ -455,7 +458,7 @@ namespace VirtualPet
                     {
                         Thirsty++;
                     }
-                    Console.WriteLine("You let the toilet seat up, so {0} drank from the toilet.", Name);
+                    Console.WriteLine("You left the toilet seat up, so {0} drank from the toilet.", Name);
                 }
 
             }
