@@ -9,7 +9,7 @@ namespace VirtualPet
     class Temperment
     {
         Pet Pug = new Pet();
-        public static void CharmingPug()
+        public void CharmingPug()
         {
             //Pugs are naturally beautiful dogs. They are small with an adorable face that will make anyone want to hold and cuddle them. 
             //Of course they know this and will use every opportunity they have to charm you.

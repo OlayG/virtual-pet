@@ -438,12 +438,10 @@ namespace VirtualPet
      
         public void Tick()
         {
-            //Tick pugParty = new Tick();
-           
             //TODO
             if (IsAlive())
             {
-                if (random.Next(100)+1 <= 10)
+                if (Hungry < 3 && random.Next(100)+1 <= 10)
                 {
                     for (int i = Hungry; i < MinHungerThirst; i++)
                     {
@@ -452,7 +450,7 @@ namespace VirtualPet
                     Console.WriteLine("{0} found the food stash!", Name);
                 }
 
-                if (random.Next(100) + 1 <= 5)
+                if (Thirsty < 3 && random.Next(100) + 1 <= 10)
                 {
                     for (int i = Thirsty; i < MinHungerThirst; i++)
                     {

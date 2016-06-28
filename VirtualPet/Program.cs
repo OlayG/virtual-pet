@@ -75,8 +75,11 @@ namespace VirtualPet
                 Console.WriteLine();
                 Console.ResetColor();
 
-                
-
+                Temperment feelings = new Temperment();
+                if (newPug.Hungry < 4)
+                {
+                    feelings.CharmingPug();
+                }
                 selection = Convert.ToInt32(Console.ReadLine());
 
                 if (selection == 1)
